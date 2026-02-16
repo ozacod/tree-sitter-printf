@@ -391,6 +391,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'z') ADVANCE(33);
       if (lookahead == ' ' ||
           lookahead == '#' ||
+          lookahead == '\'' ||
           lookahead == '+' ||
           lookahead == '-' ||
           lookahead == '0') ADVANCE(19);
@@ -485,6 +486,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(sym_flags);
       if (lookahead == ' ' ||
           lookahead == '#' ||
+          lookahead == '\'' ||
           lookahead == '+' ||
           lookahead == '-' ||
           lookahead == '0') ADVANCE(19);

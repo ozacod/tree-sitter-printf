@@ -116,12 +116,26 @@
       "value": "[a-zA-Z]"
     },
     "flags": {
-      "type": "PATTERN",
-      "value": "[+\\-#0 ]+"
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 2,
+        "content": {
+          "type": "PATTERN",
+          "value": "[+\\-#0 ']+"
+        }
+      }
     },
     "width": {
-      "type": "PATTERN",
-      "value": "[1-9][0-9]*|\\*"
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 1,
+        "content": {
+          "type": "PATTERN",
+          "value": "[1-9][0-9]*|\\*"
+        }
+      }
     },
     "precision": {
       "type": "PATTERN",

@@ -18,9 +18,9 @@ module.exports = grammar({
 
         type: $ => /[a-zA-Z]/,
 
-        flags: $ => /[+\-#0 ]+/,
+        flags: $ => token(prec(2, /[+\-#0 ']+/)),
 
-        width: $ => /[1-9][0-9]*|\*/,
+        width: $ => token(prec(1, /[1-9][0-9]*|\*/)),
 
         precision: $ => /\.\*|\.[0-9]*/,
 
