@@ -1,0 +1,245 @@
+====================
+Simple format specifiers
+====================
+
+"%d"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (type))))
+
+====================
+Text with format
+====================
+
+"Hello %s, you are %d years old"
+
+---
+
+(format_string
+  (text_parts
+    (text))
+  (text_parts
+    (format
+      (type)))
+  (text_parts
+    (text))
+  (text_parts
+    (format
+      (type)))
+  (text_parts
+    (text)))
+
+====================
+Flags width precision size
+====================
+
+"%+010.5f"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (flags)
+      (width)
+      (precision)
+      (type))))
+
+====================
+Multiple flags
+====================
+
+"%+0d"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (flags)
+      (type))))
+
+====================
+Hex with flags size
+====================
+
+"%#08lx"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (flags)
+      (width)
+      (size)
+      (type))))
+
+====================
+Long long and short
+====================
+
+"%lld %hd"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (size)
+      (type)))
+  (text_parts
+    (text))
+  (text_parts
+    (format
+      (size)
+      (type))))
+
+====================
+Escape sequences
+====================
+
+"Hello %s\n"
+
+---
+
+(format_string
+  (text_parts
+    (text))
+  (text_parts
+    (format
+      (type)))
+  (text_parts
+    (escape_sequence)))
+
+====================
+Percent escape
+====================
+
+"100%% done"
+
+---
+
+(format_string
+  (text_parts
+    (text))
+  (text_parts)
+  (text_parts
+    (text)))
+
+====================
+Uppercase type
+====================
+
+"%X %E %G"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (type)))
+  (text_parts
+    (text))
+  (text_parts
+    (format
+      (type)))
+  (text_parts
+    (text))
+  (text_parts
+    (format
+      (type))))
+
+====================
+Star width and precision
+====================
+
+"%*.*f"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (width)
+      (precision)
+      (type))))
+
+====================
+Size z
+====================
+
+"%zu"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (size)
+      (type))))
+
+====================
+Negative flag with width
+====================
+
+"%-20.10s"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (flags)
+      (width)
+      (precision)
+      (type))))
+
+====================
+Zero flag with width
+====================
+
+"%05i"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (flags)
+      (width)
+      (type))))
+
+====================
+Scientific with size L
+====================
+
+"%+.12Le"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (flags)
+      (precision)
+      (size)
+      (type))))
+
+====================
+Hex float with size L
+====================
+
+"%La"
+
+---
+
+(format_string
+  (text_parts
+    (format
+      (size)
+      (type))))

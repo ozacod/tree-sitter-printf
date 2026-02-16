@@ -58,6 +58,7 @@
   {
     "type": "format_string",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -83,6 +84,10 @@
       "multiple": false,
       "required": false,
       "types": [
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
         {
           "type": "format",
           "named": true
@@ -121,6 +126,10 @@
   {
     "type": "L",
     "named": false
+  },
+  {
+    "type": "escape_sequence",
+    "named": true
   },
   {
     "type": "flags",
