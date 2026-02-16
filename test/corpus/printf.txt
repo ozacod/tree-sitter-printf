@@ -2,7 +2,7 @@
 Simple format specifiers
 ====================
 
-"%d"
+%d
 
 ---
 
@@ -15,7 +15,7 @@ Simple format specifiers
 Text with format
 ====================
 
-"Hello %s, you are %d years old"
+Hello %s, you are %d years old
 
 ---
 
@@ -37,7 +37,7 @@ Text with format
 Flags width precision size
 ====================
 
-"%+010.5f"
+%+010.5f
 
 ---
 
@@ -53,7 +53,7 @@ Flags width precision size
 Multiple flags
 ====================
 
-"%+0d"
+%+0d
 
 ---
 
@@ -67,7 +67,7 @@ Multiple flags
 Hex with flags size
 ====================
 
-"%#08lx"
+%#08lx
 
 ---
 
@@ -83,7 +83,7 @@ Hex with flags size
 Long long and short
 ====================
 
-"%lld %hd"
+%lld %hd
 
 ---
 
@@ -103,7 +103,7 @@ Long long and short
 Escape sequences
 ====================
 
-"Hello %s\n"
+Hello %s\n
 
 ---
 
@@ -120,7 +120,7 @@ Escape sequences
 Percent escape
 ====================
 
-"100%% done"
+100%% done
 
 ---
 
@@ -135,7 +135,7 @@ Percent escape
 Uppercase type
 ====================
 
-"%X %E %G"
+%X %E %G
 
 ---
 
@@ -158,7 +158,7 @@ Uppercase type
 Star width and precision
 ====================
 
-"%*.*f"
+%*.*f
 
 ---
 
@@ -173,7 +173,7 @@ Star width and precision
 Size z
 ====================
 
-"%zu"
+%zu
 
 ---
 
@@ -187,7 +187,7 @@ Size z
 Negative flag with width
 ====================
 
-"%-20.10s"
+%-20.10s
 
 ---
 
@@ -203,7 +203,7 @@ Negative flag with width
 Zero flag with width
 ====================
 
-"%05i"
+%05i
 
 ---
 
@@ -218,7 +218,7 @@ Zero flag with width
 Scientific with size L
 ====================
 
-"%+.12Le"
+%+.12Le
 
 ---
 
@@ -234,7 +234,7 @@ Scientific with size L
 Hex float with size L
 ====================
 
-"%La"
+%La
 
 ---
 

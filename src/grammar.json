@@ -3,32 +3,11 @@
   "name": "printf",
   "rules": {
     "format_string": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "\""
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "REPEAT",
-              "content": {
-                "type": "SYMBOL",
-                "name": "text_parts"
-              }
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "STRING",
-          "value": "\""
-        }
-      ]
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "text_parts"
+      }
     },
     "text_parts": {
       "type": "CHOICE",
@@ -207,7 +186,7 @@
     },
     "text": {
       "type": "PATTERN",
-      "value": "[^%\"\\\\]+"
+      "value": "[^%\\\\\\n]+"
     }
   },
   "extras": [

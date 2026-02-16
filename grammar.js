@@ -4,7 +4,7 @@ module.exports = grammar({
     extras: $ => [/\n/],
 
     rules: {
-        format_string: $ => seq('"', optional(repeat($.text_parts)), '"'),
+        format_string: $ => repeat1($.text_parts),
 
         text_parts: $ => choice($.text, $.format, '%%', $.escape_sequence),
 
@@ -28,6 +28,6 @@ module.exports = grammar({
 
         escape_sequence: $ => /\\[abfnrtv\\\\'"?0]|\\x[0-9a-fA-F]+|\\[0-7]{1,3}|\\u[0-9a-fA-F]{4}|\\U[0-9a-fA-F]{8}/,
 
-        text: $ => /[^%"\\]+/,
+        text: $ => /[^%\\\n]+/,
     }
 });

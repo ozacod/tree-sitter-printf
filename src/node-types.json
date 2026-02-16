@@ -62,7 +62,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "text_parts",
@@ -98,10 +98,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "\"",
-    "named": false
   },
   {
     "type": "%",
